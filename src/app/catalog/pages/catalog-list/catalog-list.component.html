@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-12 mt-2">
+        <select name="sortData" class="form-select" #sort (change)="sortData(sort.value)">
+            <option value="0">Цена по возрастанию</option>
+            <option value="1">Цена по убыванию</option>
+            <option value="2">Кол. на складе по возрастанию</option>
+            <option value="3">Кол. на складе по убыванию</option>
+        </select>
+    </div>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Название</th>
+            <th class="category"><select name="category" class="form-select" #category
+                (change)="filter(category.value,'category')">
+                <option value="{{item.id}}" *ngFor="let item of catalogService.categories">{{item.name}}</option>
+            </select></th>
+            <th>Вес</th>
+            <th>Цена</th>
+            <th class="count"><select name="counter" class="form-select" #counter
+                (change)="filter(counter.value,'count')">
+                <option value="{{item.id}}" *ngFor="let item of counts">{{item.name}}</option>
+            </select></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let catalog of catalogs">
+
+            <td>{{catalog.name}}</td>
+            <td>{{getCategoriesCatalog(catalog.category)}}</td>
+            <td>{{catalog.weight}}</td>
+            <td>{{catalog.price}}</td>
+            <td>{{catalog.count}} <div>
+                    <button class="btn btn-primary
+                btn-sm btn-block me-1" type="button" (click)="count(catalog, 'plus')">+</button>
+                    <button class="btn btn-primary
+                btn-sm btn-block me-1" type="button" [disabled]="catalog.count==0" (click)="count(catalog, 'minus')">-</button>
+                </div>
+            </td>
+            <td><button class="btn btn-primary float-end mt-2" type="button"
+                    (click)="linkToItem(catalog.id)">Изменить</button></td>
+        </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-primary float-end" (click)="linkToItem()">Новый</button>
+    </div>
+</div>

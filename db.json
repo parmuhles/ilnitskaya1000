@@ -1,0 +1,72 @@
+{
+  "catalog": [
+    {
+      "name": "Диван",
+      "article": "HSGW9",
+      "price": 33000,
+      "producer": "Волга",
+      "category": " 1",
+      "weight": 100,
+      "count": 3,
+      "id": 1
+    },
+    {
+      "name": "Холодильник",
+      "article": "IWLS3",
+      "price": 20000,
+      "producer": "Indesit",
+      "category": " 2",
+      "weight": 101,
+      "count": 7,
+      "id": 2
+    },
+    {
+      "name": "Война и мир",
+      "article": "WHDS12",
+      "price": 400,
+      "producer": "Просвещение",
+      "category": " 3",
+      "weight": 0.2,
+      "count": 67,
+      "id": 3
+    },
+    {
+      "name": "Xiaomi Redmi",
+      "article": "SADWE32",
+      "price": 13000,
+      "producer": "Xiaomi",
+      "category": " 4",
+      "weight": 0.1,
+      "count": 56,
+      "id": 4
+    },
+    {
+      "name": "Стул",
+      "article": "HDE67",
+      "price": 1000,
+      "producer": "IKEA",
+      "category": " 1",
+      "weight": 1,
+      "count": 0,
+      "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Мебель"
+    },
+    {
+      "id": 2,
+      "name": "Техника"
+    },
+    {
+      "id": 3,
+      "name": "Книги"
+    },
+    {
+      "id": 4,
+      "name": "Телефоны"
+    }
+  ]
+}
